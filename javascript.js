@@ -18,3 +18,11 @@ gridDivs.forEach(
         })
     }
 )
+
+function createNewGrid(e) {
+    const gridCount = prompt("Enter a number for each side of the grid");
+    console.log(gridCount);
+}
+
+newGridButton = document.querySelector("button");
+newGridButton.addEventListener("click", createNewGrid);

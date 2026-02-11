@@ -9,6 +9,11 @@ h1 {
     color: blue;
 }
 
+button {
+    display: block;
+    margin-bottom: 20px;
+}
+
 .container {
     border: 2px solid red;
     height: 480px;
