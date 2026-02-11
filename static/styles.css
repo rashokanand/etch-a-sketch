@@ -1,3 +1,18 @@
 h1 {
     color: blue;
 }
+
+.container {
+    border: 2px solid red;
+    height: 160px;
+    width: 160px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4px;
+}
+
+.container div {
+    border: 1px solid black;
+    height: 8px;
+    width: 8px;
+}
