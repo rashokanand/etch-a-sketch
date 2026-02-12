@@ -1,12 +1,33 @@
 // Create 16x16 divs inside container
-let gridDivs = [];
-for (let i = 0; i < 16*16; i++) {
-    const div = document.createElement("div");
-    gridDivs.push(div);
+// let gridDivs = [];
+// for (let i = 0; i < 16*16; i++) {
+//     const div = document.createElement("div");
+//     gridDivs.push(div);
+// }
+
+function createSqGrid(gridWidth, containerDiv) {
+    let gridSqrs = [];
+    for (let i = 0; i < gridWidth * gridWidth; i++) {
+        const sqr = document.createElement("div");
+        gridSqrs.push(sqr);
+    }
+    // return gridSqrs;
+    const contWidth = containerDiv.style.width;
+    gridSqrs.forEach(
+        (div) => {
+            div.style.height = `${contWidth / gridWidth}px`;//Modify dimensions of new grid square
+            div.style.width = `${contWidth / gridWidth}px`;
+            containerDiv.appendChild(div);
+        }
+    )
+    return gridSqrs;
 }
 
 
 const containerDiv = document.querySelector(".container");
+containerDiv.style.width = "480px", containerDiv.style.height = "480px";
+
+let gridDivs = createSqGrid(16, containerDiv); // Initialize grid to 16x16 size
 
 //Add listener on container and delegate to children
 containerDiv.addEventListener("mouseover", e => {
@@ -18,11 +39,11 @@ containerDiv.addEventListener("mouseover", e => {
 })
 
 
-gridDivs.forEach(
-    (div) => {
-        containerDiv.appendChild(div);
-    }
-)
+// gridDivs.forEach(
+//     (div) => {
+//         containerDiv.appendChild(div);
+//     }
+// )
 
 function createNewGrid(e) {
     const gridCount = Number(prompt("Enter a number for each side of the grid. (Max 100)"));
