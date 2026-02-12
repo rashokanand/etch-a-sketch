@@ -25,7 +25,7 @@ let gridDivs = createSqGrid(16, containerDiv); // Initialize grid to 16x16 size
 
 //Add listener on container and delegate to children
 containerDiv.addEventListener("mouseover", e => {
-    //Random rgb color
+    //Random rgb color and opacity increment
     const r = Math.floor(Math.random() * 256);
     const g = Math.floor(Math.random() * 256);
     const b = Math.floor(Math.random() * 256);
