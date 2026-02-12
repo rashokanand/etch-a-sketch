@@ -10,7 +10,11 @@ const containerDiv = document.querySelector(".container");
 
 //Add listener on container and delegate to children
 containerDiv.addEventListener("mouseover", e => {
-    e.target.classList.add('hover');
+    //Random rgb color
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    e.target.style.backgroundColor = `rgb(${r} ${g} ${b})`;
 })
 
 
