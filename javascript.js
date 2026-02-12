@@ -23,7 +23,7 @@ gridDivs.forEach(
 function createNewGrid(e) {
     const gridCount = Number(prompt("Enter a number for each side of the grid. (Max 100)"));
     // console.log(gridCount);
-    if (gridCount >= 100 || isNaN(gridCount)) {
+    if (gridCount > 100 || isNaN(gridCount)) {
         alert("Your input is invalid. Please try again.");
         return 0;
     }
@@ -45,7 +45,6 @@ function createNewGrid(e) {
             containerDiv.appendChild(div);
         }
     )
-
 }
 
 newGridButton = document.querySelector("button");
