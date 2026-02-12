@@ -29,7 +29,17 @@ containerDiv.addEventListener("mouseover", e => {
     const r = Math.floor(Math.random() * 256);
     const g = Math.floor(Math.random() * 256);
     const b = Math.floor(Math.random() * 256);
-    e.target.style.backgroundColor = `rgb(${r} ${g} ${b})`;
+
+    let bg = e.target.style.background;
+    let opacity = 0.1;
+
+    //rgba(44, 123, 227, 0.1) extract opacity from this
+    if (bg) {
+        opacity = Number(bg.slice(-4,-1));
+        opacity += 0.1;
+    }
+
+    e.target.style.background = `rgb(${r} ${g} ${b} / ${opacity})`;
 })
 
 

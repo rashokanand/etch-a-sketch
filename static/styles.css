@@ -27,4 +27,9 @@ button {
     height: 30px;
     width: 30px;
     box-sizing: border-box;
+    background: rgb(0 0 0 / 0);
 }
+/* 
+.div_opacity {
+    opacity: 0;
+} */
