@@ -43,12 +43,8 @@ function createNewGrid(e) {
             div.style.height = `${480 / gridCount}px`;//Modify dimensions of new grid square
             div.style.width = `${480 / gridCount}px`;
             containerDiv.appendChild(div);
-            div.addEventListener("mouseenter", () => {
-                div.classList.add('hover');
-            })
         }
     )
-    // console.log(gridDivs);
 
 }
 
