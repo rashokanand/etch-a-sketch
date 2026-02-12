@@ -6,15 +6,17 @@ for (let i = 0; i < 16*16; i++) {
 }
 
 
-//Append created divs to container
-// And add event listeners to each
 const containerDiv = document.querySelector(".container");
+
+//Add listener on container and delegate to children
+containerDiv.addEventListener("mouseover", e => {
+    e.target.classList.add('hover');
+})
+
+
 gridDivs.forEach(
     (div) => {
         containerDiv.appendChild(div);
-        div.addEventListener("mouseenter", () => {
-            div.classList.add('hover');
-        })
     }
 )
 
