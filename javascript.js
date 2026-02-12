@@ -1,9 +1,3 @@
-// Create 16x16 divs inside container
-// let gridDivs = [];
-// for (let i = 0; i < 16*16; i++) {
-//     const div = document.createElement("div");
-//     gridDivs.push(div);
-// }
 
 function createSqGrid(gridWidth, containerDiv) {
     let gridSqrs = [];
@@ -38,12 +32,6 @@ containerDiv.addEventListener("mouseover", e => {
     e.target.style.backgroundColor = `rgb(${r} ${g} ${b})`;
 })
 
-
-// gridDivs.forEach(
-//     (div) => {
-//         containerDiv.appendChild(div);
-//     }
-// )
 
 function createNewGrid(e) {
     const gridCount = Number(prompt("Enter a number for each side of the grid. (Max 100)"));
